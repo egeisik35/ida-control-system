@@ -11,16 +11,16 @@ except ImportError:
 
 def launch_mavproxy():
     """
-    Launch MAVProxy with map and console modules for ground station functionality.
+    Launch MAVProxy with GUI modules for ground station functionality.
     """
-    # Adjust connection string for your setup (e.g., serial, udp, etc.)
-    connection = "udp:127.0.0.1:14550"
+    connection = "udp:127.0.0.1:14550"  # Or replace with your actual connection string
+    modules = ["console", "map", "adsb"]  # Add/remove modules as needed
     cmd = [
         "mavproxy.py",
         f"--master={connection}",
-        "--console",
-        "--map"
+        "--load-module", ",".join(modules)
     ]
+
     print(f"[INFO] Launching MAVProxy with: {' '.join(cmd)}")
     subprocess.run(cmd)
 

@@ -5,12 +5,8 @@
 # Eğer pip ile dbus-python gerekirse:
 # pip install dbus-python
 
-kivy
-garden
-kivy-garden
-kivy_garden.mapview
 pymavlink
 pygame
-folium
 pyserial
 MAVProxy
+future
