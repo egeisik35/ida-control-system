@@ -13,3 +13,4 @@ pymavlink
 pygame
 folium
 pyserial
+MAVProxy
